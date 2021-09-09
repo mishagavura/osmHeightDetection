@@ -3,8 +3,12 @@ overpass = Overpass()
 #, '"building"="apartments"', '"building"="service"', '"building"="school"', '"building"="kindergarten"', '"building"="industrial"'
 
 list_txts = ['yes', 'apartments', 'service', 'school', 'kindergarten', 'industrial']
+x1 = input('Input bottom number: ')
+y1 = input('Input left number: ')
+x2 = input('Input top number: ')
+y2 = input('Input right number: ')
 for i in range(1,7):
-	exec(f'query{i} = overpassQueryBuilder(bbox=[50.41, 30.58, 50.46, 30.61], elementType=\'way\', selector=\'"building"="{list_txts[i-1]}"\', out=\'body\')')
+	exec(f'query{i} = overpassQueryBuilder(bbox=[{x1}, {y1}, {x2}, {y2}], elementType=\'way\', selector=\'"building"="{list_txts[i-1]}"\', out=\'body\')')
 	exec(f'yestxt{i} = open(\'{list_txts[i-1]}.txt\', \'w\', encoding=\'utf-8\')')
 	exec(f'yestxt{i}.write("")')
 	exec(f'result{i} = overpass.query(query{i})')
