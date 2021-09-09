@@ -4,7 +4,7 @@
   ```
 #### Run api.py in console or terminal ####
 ```python
-python api.py
+python main.py
   ```
 
 #### Go to open street map website ####
