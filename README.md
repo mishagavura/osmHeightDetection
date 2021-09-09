@@ -11,6 +11,7 @@ python api.py
 https://www.openstreetmap.org/export
 
 #### Select area that you need ####
+![image](https://user-images.githubusercontent.com/43016416/132765642-b75de38d-2989-42a8-b2f4-c27e79c47e25.png)
 
 #### Return to cmd and input numbers like said in instructions ####
 
