@@ -24,7 +24,8 @@ for item in result1.elements():
 		res_1 += 1
 		r_write = ''
 		try:
-			r_write = item.tags()['addr:street'] + ' ' + item.tags()['addr:housenumber'] + '\n'
+			print(item.id())
+			r_write = str(item.id()) + "   :   "+ item.tags()['addr:street'] + ' ' + item.tags()['addr:housenumber'] +  '\n'
 			yestxt = open('yes.txt', 'a', encoding='utf-8')
 			yestxt.write(r_write)
 			written_1 += 1
@@ -39,7 +40,7 @@ for item in result2.elements():
 		res_2 += 1
 		r_write = ''
 		try:
-			r_write = item.tags()['addr:street'] + ' ' + item.tags()['addr:housenumber'] + '\n'
+			r_write = str(item.id()) + "   :   "+ item.tags()['addr:street'] + ' ' + item.tags()['addr:housenumber']   + '\n'
 			yestxt = open('apartments.txt', 'a', encoding='utf-8')
 			yestxt.write(r_write)
 			written_2 += 1
@@ -54,7 +55,7 @@ for item in result3.elements():
 		res_3 += 1
 		r_write = ''
 		try:
-			r_write = item.tags()['addr:street'] + ' ' + item.tags()['addr:housenumber'] + '\n'
+			r_write = str(item.id()) + "   :   "+ item.tags()['addr:street'] + ' ' + item.tags()['addr:housenumber']   + '\n'
 			yestxt = open('service.txt', 'a', encoding='utf-8')
 			yestxt.write(r_write)
 			written_3 += 1
@@ -69,7 +70,7 @@ for item in result4.elements():
 		res_4 += 1
 		r_write = ''
 		try:
-			r_write = item.tags()['addr:street'] + ' ' + item.tags()['addr:housenumber'] + '\n'
+			r_write = str(item.id()) + "   :   "+ item.tags()['addr:street'] + ' ' + item.tags()['addr:housenumber']  +  '\n' 
 			yestxt = open('school.txt', 'a', encoding='utf-8')
 			yestxt.write(r_write)
 			written_4 += 1
@@ -84,7 +85,7 @@ for item in result5.elements():
 		res_5 += 1
 		r_write = ''
 		try:
-			r_write = item.tags()['addr:street'] + ' ' + item.tags()['addr:housenumber'] + '\n'
+			r_write = str(item.id()) + "   :   "+ item.tags()['addr:street'] + ' ' + item.tags()['addr:housenumber']  +  '\n'
 			yestxt = open('kindergarten.txt', 'a', encoding='utf-8')
 			yestxt.write(r_write)
 			written_5 += 1
@@ -99,7 +100,7 @@ for item in result6.elements():
 		res_6 += 1
 		r_write = ''
 		try:
-			r_write = item.tags()['addr:street'] + ' ' + item.tags()['addr:housenumber'] + '\n'
+			r_write = str(item.id()) + "   :   "+ item.tags()['addr:street'] + ' ' + item.tags()['addr:housenumber']  + '\n'
 			yestxt = open('industrial.txt', 'a', encoding='utf-8')
 			yestxt.write(r_write)
 			written_6 += 1
