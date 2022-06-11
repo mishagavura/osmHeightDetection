@@ -6,7 +6,7 @@ list_txts = ['yes', 'apartments', 'service', 'school', 'kindergarten', 'industri
 x1 = input('Input bottom number: ')
 y1 = input('Input left number: ')
 x2 = input('Input top number: ')
-y2 = input('Input right number: ')
+y2 = input('Input right number: ')x
 for i in range(1,7):
 	exec(f'query{i} = overpassQueryBuilder(bbox=[{x1}, {y1}, {x2}, {y2}], elementType=\'way\', selector=\'"building"="{list_txts[i-1]}"\', out=\'body\')')
 	exec(f'yestxt{i} = open(\'{list_txts[i-1]}.txt\', \'w\', encoding=\'utf-8\')')
@@ -15,8 +15,8 @@ for i in range(1,7):
 	exec(f'res_{i} = 0')
 	exec(f'written_{i} = 0')
 
-adres = input('Would you like to see adresses? type y/n')
-if adres == 'y':
+address = input('Would you like to see adresses? type y/n')
+if address == 'y':
 
 	for item in result1.elements():
 		try:
